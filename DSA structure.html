@@ -1,0 +1,276 @@
+<html>
+<title>DSA Structure</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+ font-family: "Poppins", sans-serif;
+}
+h2{
+text-align: center;
+padding: 1rem .5rem;
+}
+table{
+width: 100%;
+font-size: 15px;
+}
+strong{
+padding: 0rem .5rem;
+}
+table th{
+padding: 1rem;
+}
+.sec2{
+font-size: 1.1rem;
+}
+div{
+padding: 2rem 4rem;
+}
+.sec5{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+line-height: 2rem;
+}
+</style>
+<body>
+<h2>DSA Structure 😉</h2>
+<section class="sec1">
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Description</th>
+      <th>When to Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Beginner -->
+    <tr><td colspan="3" style="background-color:#d4fcd4;"><strong>🟢 Beginner (Core DSA)</strong></td></tr>
+    <tr><td>Arrays</td><td>Core data structure; problems involve iteration, indexing.</td><td>Use when dealing with fixed-size, index-based data.</td></tr>
+    <tr><td>Strings</td><td>Similar to arrays; focus on character manipulation, substrings.</td><td>Use for pattern matching, substrings, or character counts.</td></tr>
+    <tr><td>Two-pointers</td><td>Technique for solving problems with sorted arrays or subarrays.</td><td>Use for pairs, subarrays, or moving start-end pointers.</td></tr>
+    <tr><td>Hashing</td><td>Use of hash maps/sets to track frequency, detect duplicates, etc.</td><td>Use when you need fast lookup, frequency count, or uniqueness.</td></tr>
+    <tr><td>Stack</td><td>LIFO structure; used for problems like parentheses, evaluation, undo.</td><td>Use for expression parsing, backtracking, or history.</td></tr>
+    <tr><td>Queue</td><td>FIFO structure; useful in BFS and scheduling problems.</td><td>Use when you need level-wise traversal or first-in-first-out logic.</td></tr>
+    <tr><td>Recursion</td><td>Solving problems via function self-calls.</td><td>Use for divide-and-conquer, tree traversal, or backtracking.</td></tr>
+
+    <!-- Intermediate -->
+    <tr><td colspan="3" style="background-color:#fff7d6;"><strong>🟡 Intermediate</strong></td></tr>
+    <tr><td>Sliding Window</td><td>Efficiently solving subarray/substring problems using dynamic window size.</td><td>Use when you're scanning substrings or continuous subarrays.</td></tr>
+    <tr><td>Prefix Sum</td><td>Precomputing sums to optimize range queries.</td><td>Use when you need frequent sum queries on static arrays.</td></tr>
+    <tr><td>Binary Search</td><td>Search on sorted arrays or applying binary search on results.</td><td>Use when data is sorted or when optimizing a value.</td></tr>
+    <tr><td>Backtracking</td><td>Trying all possibilities recursively with pruning.</td><td>Use in puzzles like Sudoku, combinations, or permutations.</td></tr>
+    <tr><td>Linked List</td><td>Node-based structure; includes singly/doubly linked types.</td><td>Use when insertion/deletion in the middle is frequent.</td></tr>
+    <tr><td>Sorting</td><td>Implementing and applying algorithms like merge or quicksort.</td><td>Use to order data, prepare for greedy or binary search.</td></tr>
+    <tr><td>Searching</td><td>Linear, binary, or custom logic search algorithms.</td><td>Use for locating elements with conditions or optimized time.</td></tr>
+
+    <!-- Advanced -->
+    <tr><td colspan="3" style="background-color:#ffd6d6;"><strong>🔴 Advanced</strong></td></tr>
+    <tr><td>Trees</td><td>Includes binary trees, BSTs, traversals, balance checks.</td><td>Use when working with hierarchical data or recursive structure.</td></tr>
+    <tr><td>Graphs</td><td>DFS, BFS, topological sort, shortest paths, cycle detection.</td><td>Use for networks, dependencies, or pathfinding problems.</td></tr>
+    <tr><td>Tries</td><td>Specialized tree for strings; prefix matching & autocomplete.</td><td>Use for dictionary, prefix search, or word queries.</td></tr>
+    <tr><td>Dynamic Programming</td><td>Break problems into overlapping subproblems.</td><td>Use when there are repeated subproblems with optimal substructure.</td></tr>
+    <tr><td>Greedy</td><td>Make locally optimal choices to achieve global optimum.</td><td>Use when decisions can be made based on current state only.</td></tr>
+    <tr><td>Heap / Priority Queue</td><td>Efficiently get min/max elements in dynamic data.</td><td>Use for scheduling, merging k-sorted lists, top-k problems.</td></tr>
+    <tr><td>Union-Find / Disjoint Set</td><td>Efficient structure for tracking connected components.</td><td>Use in Kruskal's MST, cycle detection, or groupings.</td></tr>
+
+    <!-- Bonus -->
+    <tr><td colspan="3" style="background-color:#e6e6e6;"><strong>🏁 Bonus Categories</strong></td></tr>
+    <tr><td>Math</td><td>GCD, primes, combinatorics, modulo operations.</td><td>Use for number theory, puzzles, or math-heavy logic.</td></tr>
+    <tr><td>Bit Manipulation</td><td>AND, OR, XOR, shifts; efficient low-level operations.</td><td>Use when space/time is critical, often in tricky problems.</td></tr>
+    <tr><td>Greedy + Sorting</td><td>Many greedy problems rely on sorted inputs.</td><td>Use to apply greedy decisions after sorting data.</td></tr>
+    <tr><td>DP on Trees</td><td>Apply DP principles to tree structures.</td><td>Use in tree queries, subtree evaluations, or memoized traversals.</td></tr>
+    <tr><td>Topological Sort</td><td>Used in DAGs for ordering tasks.</td><td>Use in course schedules, dependency resolution.</td></tr>
+    <tr><td>Shortest Path</td><td>Dijkstra, Bellman-Ford, Floyd-Warshall algorithms.</td><td>Use for weighted graph pathfinding.</td></tr>
+    <tr><td>Segment Tree</td><td>Efficient structure for range queries and updates.</td><td>Use when needing dynamic range min/sum/max.</td></tr>
+    <tr><td>Binary Lifting</td><td>Tree-based query optimization using powers of two.</td><td>Use for Lowest Common Ancestor (LCA) queries.</td></tr>
+    <tr><td>Monotonic Stack</td><td>Stack that maintains increasing or decreasing order.</td><td>Use in next greater/smaller element problems.</td></tr>
+    <tr><td>Design</td><td>Design systems or custom data structures.</td><td>Use in OOD rounds like LRU cache, file systems.</td></tr>
+  </tbody>
+</table>
+</section>
+<section class="sec2">
+<h2>📌 What You Should Know for Each Problem:</h2>
+<ol>
+<li>✅ Problem Statement (clearly understood)
+<li>✅ What data structure is being used?
+<li>✅ What algorithmic approach is this?
+<ul>
+<li>Sliding Window?
+<li>Greedy?
+<li>DP?
+<li>BFS/DFS?
+</ul>
+<li>✅ Why this approach works (intuition)
+<li>✅ Time and Space Complexity
+<li>✅ Edge cases and constraints
+</ol>
+</section>
+
+<h2> 50 days Challenge 🎯</h2>
+<div>
+<h3>✅ Daily Target:</h3>
+<ol>
+<li>🟢 2–3 Easy problems
+<li>🟠 1–2 Medium problems
+<li>🔴 1 Hard problem every 2 days
+</ol>
+</div>
+
+<section class="sec3">
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Week</th>
+      <th>Category</th>
+      <th>Easy</th>
+      <th>Medium</th>
+      <th>Hard</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Arrays, Two Pointers, Sliding Window</td>
+      <td>20</td>
+      <td>12</td>
+      <td>4</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Hashing, Prefix Sum, Sorting</td>
+      <td>18</td>
+      <td>10</td>
+      <td>3</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Stacks, Queues, Monotonic Stack</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Recursion, Backtracking, Bitmasking</td>
+      <td>14</td>
+      <td>10</td>
+      <td>4</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Trees, Graphs, BFS/DFS</td>
+      <td>15</td>
+      <td>12</td>
+      <td>5</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Greedy, Binary Search, Heaps</td>
+      <td>14</td>
+      <td>10</td>
+      <td>3</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Dynamic Programming, Tries, Union-Find</td>
+      <td>13</td>
+      <td>11</td>
+      <td>5</td>
+      <td>29</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr style="font-weight:bold; background-color:#fccdca;">
+      <td colspan="2">Total</td>
+      <td>120</td>
+      <td>77</td>
+      <td>25</td>
+      <td>222</td>
+    </tr>
+  </tfoot>
+</table>
+</section>
+<h2>🧠 What's Missing (to Reach 100%)</h2>
+<section class="sec4">
+<div>
+❗1. Practice Thinking Before Seeing the Solution<br><br>
+Right now, if you rely on seeing the solution to understand the pattern — that’s dangerous in interviews.<br><br>
+
+🛠 Fix: Use “Think First” sessions:
+<ul>
+<li>Try for 20 minutes without looking.
+<li>Even brute-force is okay at first — then refine.
+<li>If stuck, ask ChatGPT to hint, not solve — like :<br>
+"Can you guide me through this step-by-step without showing the full code?"
+</ul>
+</div>
+
+<div>
+❗2. Mock Interviews (Timed + Verbal Explanation)<br><br>
+Google won’t just give you a problem — they want:<br>
+
+<ul>
+<li>How you approach it out loud
+<li>What edge cases you consider
+<li>Whether you explain your intuition and complexity
+</ul>
+
+🛠 Fix:
+<ul>
+<li>Do 1 mock/week using Pramp, Excalidraw + voice, or even record yourself explaining.
+<li>Or ask me: “Give me a random Medium-level DSA mock interview question and walk me through it.”
+</ul>
+</div>
+
+<div>
+❗3. Revisiting Old Problems (Spaced Repetition)<br><br>
+You might solve 222 problems, but forget 100 of them after 3 weeks.<br>
+🛠 Fix:
+
+Use a spaced repetition list:
+<ul>
+<li>⭐ Mark “repeat later” problems in your tracker
+<li>Review these every 1–2 weeks
+<li>Try solving without looking again
+</ul>
+</div>
+
+<div>
+❗4. Do Real-World Use Case DSA<br><br>
+SRE interviews may sometimes involve applying DSA in system-level problems like:<br>
+<ul>
+<li>Rate limiters (queues, maps)
+<li>Load balancing (heap, hashing)
+<li>Monitoring (sliding window, prefix sum)
+<li>Caching (LRU – design + DSA)
+</ul>
+🛠 Fix:
+<ul>
+<li>Pick 1–2 such system-oriented DSA problems per week.
+<li>I can give you a curated list just for that if you want.
+<ul>
+</div>
+</section>
+<h2>Work Now 🧐</h2>
+<section class="sec5">
+<div>
+Update your progress here : <a target="_blank" href= "https://docs.google.com/spreadsheets/d/1TtjerPx4fxOragfQKHJOPMv5B256cI99/edit?usp=sharing&ouid=100460215473701826376&rtpof=true&sd=true"> DSA Pattern Book.xlsx</a><br>
+Open Leetcode : <a target="_blank" href="https://leetcode.com/problemset/">https://leetcode.com/problemset/</a>
+</div>
+
+<div>
+<img src="https://leetcard.jacoblin.cool/dattu145233?theme=dark&ext=activity" />
+</div>
+</section>
+</body>
+</html>
