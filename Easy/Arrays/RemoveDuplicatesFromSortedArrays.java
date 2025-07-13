@@ -1,7 +1,5 @@
 // File: Easy/Arrays/RemoveDuplicatesFromSortedArrays.java
 
-package Easy.Arrays;
-
 /*
 
  - Problem: Remove duplicates from sorted arrays

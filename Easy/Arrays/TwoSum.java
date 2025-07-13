@@ -1,7 +1,5 @@
 // File: Easy/Arrays/TwoSum.java
 
-package Easy.Arrays;
-
 /*
 
  - Problem: Two Sum

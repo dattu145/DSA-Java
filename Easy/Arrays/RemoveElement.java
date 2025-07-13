@@ -1,7 +1,5 @@
 // File: Easy/Arrays/RemoveElement.java
 
-package Easy.Arrays;
-
 /*
 
  - Problem: Remove Element
