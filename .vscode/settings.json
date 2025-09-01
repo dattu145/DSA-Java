@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "Easy/TwoPointers/Arrays",
+        "Medium/TwoPointers/Arrays"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}

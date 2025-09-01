@@ -13,7 +13,7 @@ public class ContainerWithMaxWater {
             if(heights[left] < heights[right]) left++;
             else right--;
         }
-
+ 
         return maxWater;
     }
 
