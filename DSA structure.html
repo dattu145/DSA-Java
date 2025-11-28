@@ -1,277 +1,999 @@
-<html>
-<title>DSA Structure</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-*{
- font-family: "Poppins", sans-serif;
-}
-h2{
-text-align: center;
-padding: 1rem .5rem;
-}
-table{
-width: 100%;
-font-size: 15px;
-}
-strong{
-padding: 0rem .5rem;
-}
-table th{
-padding: 1rem;
-}
-.sec2{
-font-size: 1.1rem;
-}
-div{
-padding: 2rem 4rem;
-}
-.sec5{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-line-height: 2rem;
-}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Mastery Plan - 50 LPA Goal</title>
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --success: #4cc9f0;
+      --warning: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --gray: #6c757d;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fb;
+      color: var(--dark);
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--box-shadow);
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      opacity: 0.9;
+    }
+
+    .tabs {
+      display: flex;
+      background: white;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+      cursor: pointer;
+      transition: all 0.3s;
+      border-bottom: 3px solid transparent;
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    .tab.active {
+      background-color: var(--light);
+      border-bottom: 3px solid var(--primary);
+      font-weight: bold;
+    }
+
+    .tab:hover:not(.active) {
+      background-color: rgba(67, 97, 238, 0.1);
+    }
+
+    .tab-content {
+      display: none;
+      background: white;
+      padding: clamp(1rem, 3vw, 2rem);
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      box-shadow: var(--box-shadow);
+      margin-bottom: 2rem;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+      gap: clamp(1rem, 2vw, 1.5rem);
+      margin-top: 1.5rem;
+    }
+
+    .pattern-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: clamp(1rem, 2vw, 1.5rem);
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s;
+      border-left: 4px solid var(--primary);
+    }
+
+    .pattern-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pattern-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      flex-wrap: wrap;
+    }
+
+    .star {
+      color: gold;
+      margin-left: 10px;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+
+    .pattern-card ul {
+      margin-left: 1.2rem;
+      color: var(--gray);
+    }
+
+    .pattern-card li {
+      margin-bottom: 0.3rem;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    .monthly-plan {
+      margin-top: 2rem;
+    }
+
+    .month-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: clamp(1rem, 2vw, 1.5rem);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--box-shadow);
+      border-left: 4px solid var(--warning);
+    }
+
+    .month-tabs {
+      display: flex;
+      background: white;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+
+    .month-tab {
+      padding: clamp(0.8rem, 2vw, 1rem) clamp(0.5rem, 1vw, 1.5rem);
+      cursor: pointer;
+      transition: all 0.3s;
+      border-bottom: 3px solid transparent;
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    }
+
+    .month-tab.active {
+      background-color: var(--light);
+      border-bottom: 3px solid var(--primary);
+      font-weight: bold;
+    }
+
+    .month-tab:hover:not(.active) {
+      background-color: rgba(67, 97, 238, 0.1);
+    }
+
+    .month-content {
+      display: none;
+    }
+
+    .month-content.active {
+      display: block;
+    }
+
+    .pattern-list {
+      margin-top: 0.5rem;
+    }
+
+    .pattern-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      padding: clamp(0.4rem, 1vw, 0.5rem);
+      background: white;
+      border-radius: 4px;
+      border-left: 3px solid var(--success);
+      font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    }
+
+    .month-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .month-header h3 {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+    }
+
+    .week-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: clamp(0.8rem, 2vw, 1rem);
+    }
+
+    .week-card {
+      background: var(--light);
+      border-radius: var(--border-radius);
+      padding: clamp(0.8rem, 2vw, 1rem);
+      border: 1px solid #dee2e6;
+    }
+
+    .week-card h4 {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+
+    footer {
+      text-align: center;
+      padding: clamp(1.5rem, 3vw, 2rem) 0;
+      margin-top: 3rem;
+      color: var(--gray);
+      border-top: 1px solid #dee2e6;
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    /* Extra small devices */
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .tab {
+        min-width: 120px;
+        padding: 0.7rem 0.5rem;
+        font-size: 0.85rem;
+      }
+      
+      .month-tab {
+        min-width: 100px;
+        padding: 0.7rem 0.3rem;
+        font-size: 0.75rem;
+      }
+      
+      .pattern-card {
+        padding: 1rem;
+      }
+      
+      .week-card {
+        padding: 0.8rem;
+      }
+    }
+
+    /* Small devices */
+    @media (max-width: 768px) {
+      header {
+        padding: 1.2rem 0;
+        margin-bottom: 1.2rem;
+      }
+      
+      .tab-content {
+        padding: 1.2rem;
+      }
+      
+      .pattern-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .week-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .month-tabs {
+        flex-direction: column;
+      }
+      
+      .month-tab {
+        min-width: 100%;
+      }
+    }
+
+    /* Medium devices */
+    @media (max-width: 1024px) {
+      .pattern-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      }
+    }
+
+    /* Large devices */
+    @media (min-width: 1200px) {
+      .pattern-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+      
+      .week-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) {
+      .pattern-card:hover {
+        transform: none;
+      }
+      
+      .tab:hover:not(.active),
+      .month-tab:hover:not(.active) {
+        background-color: transparent;
+      }
+    }
+
+    /* High contrast support */
+    @media (prefers-contrast: high) {
+      .pattern-card {
+        border-left-width: 6px;
+      }
+      
+      .pattern-item {
+        border-left-width: 4px;
+      }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      .pattern-card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<h2>DSA Structure 😉</h2>
-<section class="sec1">
-<table border="1" cellspacing="0" cellpadding="8">
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Description</th>
-      <th>When to Use</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Beginner -->
-    <tr><td colspan="3" style="background-color:#d4fcd4;"><strong>🟢 Beginner (Core DSA)</strong></td></tr>
-    <tr><td>Arrays</td><td>Core data structure; problems involve iteration, indexing.</td><td>Use when dealing with fixed-size, index-based data.</td></tr>
-    <tr><td>Strings</td><td>Similar to arrays; focus on character manipulation, substrings.</td><td>Use for pattern matching, substrings, or character counts.</td></tr>
-    <tr><td>Two-pointers</td><td>Technique for solving problems with sorted arrays or subarrays.</td><td>Use for pairs, subarrays, or moving start-end pointers.</td></tr>
-    <tr><td>Hashing</td><td>Use of hash maps/sets to track frequency, detect duplicates, etc.</td><td>Use when you need fast lookup, frequency count, or uniqueness.</td></tr>
-    <tr><td>Stack</td><td>LIFO structure; used for problems like parentheses, evaluation, undo.</td><td>Use for expression parsing, backtracking, or history.</td></tr>
-    <tr><td>Queue</td><td>FIFO structure; useful in BFS and scheduling problems.</td><td>Use when you need level-wise traversal or first-in-first-out logic.</td></tr>
-    <tr><td>Recursion</td><td>Solving problems via function self-calls.</td><td>Use for divide-and-conquer, tree traversal, or backtracking.</td></tr>
+  <header>
+    <div class="container">
+      <h1>DSA Mastery Plan</h1>
+      <p class="subtitle">Your 4-Month Journey to 50 LPA Package - 600 Problems</p>
+    </div>
+  </header>
 
-    <!-- Intermediate -->
-    <tr><td colspan="3" style="background-color:#fff7d6;"><strong>🟡 Intermediate</strong></td></tr>
-    <tr><td>Sliding Window</td><td>Efficiently solving subarray/substring problems using dynamic window size.</td><td>Use when you're scanning substrings or continuous subarrays.</td></tr>
-    <tr><td>Prefix Sum</td><td>Precomputing sums to optimize range queries.</td><td>Use when you need frequent sum queries on static arrays.</td></tr>
-    <tr><td>Binary Search</td><td>Search on sorted arrays or applying binary search on results.</td><td>Use when data is sorted or when optimizing a value.</td></tr>
-    <tr><td>Backtracking</td><td>Trying all possibilities recursively with pruning.</td><td>Use in puzzles like Sudoku, combinations, or permutations.</td></tr>
-    <tr><td>Linked List</td><td>Node-based structure; includes singly/doubly linked types.</td><td>Use when insertion/deletion in the middle is frequent.</td></tr>
-    <tr><td>Sorting</td><td>Implementing and applying algorithms like merge or quicksort.</td><td>Use to order data, prepare for greedy or binary search.</td></tr>
-    <tr><td>Searching</td><td>Linear, binary, or custom logic search algorithms.</td><td>Use for locating elements with conditions or optimized time.</td></tr>
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" data-tab="plan">Learning Plan</div>
+      <div class="tab" data-tab="patterns">All DSA Patterns</div>
+    </div>
 
-    <!-- Advanced -->
-    <tr><td colspan="3" style="background-color:#ffd6d6;"><strong>🔴 Advanced</strong></td></tr>
-    <tr><td>Trees</td><td>Includes binary trees, BSTs, traversals, balance checks.</td><td>Use when working with hierarchical data or recursive structure.</td></tr>
-    <tr><td>Graphs</td><td>DFS, BFS, topological sort, shortest paths, cycle detection.</td><td>Use for networks, dependencies, or pathfinding problems.</td></tr>
-    <tr><td>Tries</td><td>Specialized tree for strings; prefix matching & autocomplete.</td><td>Use for dictionary, prefix search, or word queries.</td></tr>
-    <tr><td>Dynamic Programming</td><td>Break problems into overlapping subproblems.</td><td>Use when there are repeated subproblems with optimal substructure.</td></tr>
-    <tr><td>Greedy</td><td>Make locally optimal choices to achieve global optimum.</td><td>Use when decisions can be made based on current state only.</td></tr>
-    <tr><td>Heap / Priority Queue</td><td>Efficiently get min/max elements in dynamic data.</td><td>Use for scheduling, merging k-sorted lists, top-k problems.</td></tr>
-    <tr><td>Union-Find / Disjoint Set</td><td>Efficient structure for tracking connected components.</td><td>Use in Kruskal's MST, cycle detection, or groupings.</td></tr>
+    <div class="tab-content active" id="plan">
+      <h2>4-Month DSA Learning Roadmap - 600 Problems</h2>
+      <p>This plan is designed to take you from DSA fundamentals to advanced patterns in 4 months, with 5 problems daily
+        (3 Easy + 2 Medium).</p>
 
-    <!-- Bonus -->
-    <tr><td colspan="3" style="background-color:#e6e6e6;"><strong>🏁 Bonus Categories</strong></td></tr>
-    <tr><td>Math</td><td>GCD, primes, combinatorics, modulo operations.</td><td>Use for number theory, puzzles, or math-heavy logic.</td></tr>
-    <tr><td>Bit Manipulation</td><td>AND, OR, XOR, shifts; efficient low-level operations.</td><td>Use when space/time is critical, often in tricky problems.</td></tr>
-    <tr><td>Greedy + Sorting</td><td>Many greedy problems rely on sorted inputs.</td><td>Use to apply greedy decisions after sorting data.</td></tr>
-    <tr><td>DP on Trees</td><td>Apply DP principles to tree structures.</td><td>Use in tree queries, subtree evaluations, or memoized traversals.</td></tr>
-    <tr><td>Topological Sort</td><td>Used in DAGs for ordering tasks.</td><td>Use in course schedules, dependency resolution.</td></tr>
-    <tr><td>Shortest Path</td><td>Dijkstra, Bellman-Ford, Floyd-Warshall algorithms.</td><td>Use for weighted graph pathfinding.</td></tr>
-    <tr><td>Segment Tree</td><td>Efficient structure for range queries and updates.</td><td>Use when needing dynamic range min/sum/max.</td></tr>
-    <tr><td>Binary Lifting</td><td>Tree-based query optimization using powers of two.</td><td>Use for Lowest Common Ancestor (LCA) queries.</td></tr>
-    <tr><td>Monotonic Stack</td><td>Stack that maintains increasing or decreasing order.</td><td>Use in next greater/smaller element problems.</td></tr>
-    <tr><td>Design</td><td>Design systems or custom data structures.</td><td>Use in OOD rounds like LRU cache, file systems.</td></tr>
-  </tbody>
-</table>
-</section>
-<section class="sec2">
-<h2>📌 What You Should Know for Each Problem:</h2>
-<ol>
-<li>✅ Problem Statement (clearly understood)
-<li>✅ What data structure is being used?
-<li>✅ What algorithmic approach is this?
-<ul>
-<li>Sliding Window?
-<li>Greedy?
-<li>DP?
-<li>BFS/DFS?
-</ul>
-<li>✅ Why this approach works (intuition)
-<li>✅ Time and Space Complexity
-<li>✅ Edge cases and constraints
-</ol>
-</section>
+      <div class="month-tabs">
+        <div class="month-tab active" data-month="1">Month 1: Foundations</div>
+        <div class="month-tab" data-month="2">Month 2: Core Algorithms</div>
+        <div class="month-tab" data-month="3">Month 3: Advanced Patterns</div>
+        <div class="month-tab" data-month="4">Month 4: Mastery & Integration</div>
+      </div>
 
-<h2> 50 days Challenge 🎯</h2>
-<div>
-<h3>✅ Daily Target:</h3>
-<ol>
-<li>🟢 2–3 Easy problems
-<li>🟠 1–2 Medium problems
-<li>🔴 1 Hard problem every 2 days
-</ol>
-</div>
+      <div class="monthly-plan">
+        <!-- Month 1 Content -->
+        <div class="month-content active" id="month-1">
+          <div class="month-header">
+            <h3>Month 1: Foundations & Linear Data Structures</h3>
+          </div>
+          <div class="week-grid">
+            <div class="week-card">
+              <h4>Week 1: Arrays & Strings Fundamentals</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Two Pointers Technique</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Sliding Window Patterns</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Prefix Sum & Difference Arrays</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Frequency Counting & Hashing</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Kadane's Algorithm (Max Subarray)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>In-place modifications</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 2: Linked Lists Mastery</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Fast & Slow Pointers (Cycle Detection)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Reversal in-place Techniques</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Merge Two Sorted Lists</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Palindrome Linked List</span>
+                </div>
+                <div class="pattern-item">
+                  <span>K-group Reversal</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 3: Math & Hashing Patterns</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>GCD / LCM & Modular Arithmetic</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Bit Manipulation & XOR Tricks</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Anagram Groups & Frequency Maps</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Two Sum & K-Sum Variations</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Longest Consecutive Sequence</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 4: Stacks, Queues & Recursion</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Monotonic Stack Patterns</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Balanced Parentheses & Expression Evaluation</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Subsets & Powerset Generation</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Permutations & Combinations</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Recursion Tree + Memoization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<section class="sec3">
-<table border="1" cellspacing="0" cellpadding="8">
-  <thead>
-    <tr style="background-color:#f2f2f2;">
-      <th>Week</th>
-      <th>Category</th>
-      <th>Easy</th>
-      <th>Medium</th>
-      <th>Hard</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Arrays, Two Pointers, Sliding Window</td>
-      <td>20</td>
-      <td>12</td>
-      <td>4</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Hashing, Prefix Sum, Sorting</td>
-      <td>18</td>
-      <td>10</td>
-      <td>3</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Stacks, Queues, Monotonic Stack</td>
-      <td>16</td>
-      <td>12</td>
-      <td>4</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Recursion, Backtracking, Bitmasking</td>
-      <td>14</td>
-      <td>10</td>
-      <td>4</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Trees, Graphs, BFS/DFS</td>
-      <td>15</td>
-      <td>12</td>
-      <td>5</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Greedy, Binary Search, Heaps</td>
-      <td>14</td>
-      <td>10</td>
-      <td>3</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Dynamic Programming, Tries, Union-Find</td>
-      <td>13</td>
-      <td>11</td>
-      <td>5</td>
-      <td>29</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr style="font-weight:bold; background-color:#fccdca;">
-      <td colspan="2">Total</td>
-      <td>120</td>
-      <td>77</td>
-      <td>25</td>
-      <td>222</td>
-    </tr>
-  </tfoot>
-</table>
-</section>
-<h2>🧠 What's Missing (to Reach 100%)</h2>
-<section class="sec4">
-<div>
-❗1. Practice Thinking Before Seeing the Solution<br><br>
-Right now, if you rely on seeing the solution to understand the pattern — that’s dangerous in interviews.<br><br>
+        <!-- Month 2 Content -->
+        <div class="month-content" id="month-2">
+          <div class="month-header">
+            <h3>Month 2: Core Algorithms & Non-Linear Structures</h3>
+          </div>
+          <div class="week-grid">
+            <div class="week-card">
+              <h4>Week 5: Binary Trees Fundamentals</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Tree Traversals (Pre, In, Post, Level)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Diameter & Height Calculations</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Lowest Common Ancestor (LCA)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Root-to-Leaf Path Problems</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Tree Serialization & Symmetry</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 6: BSTs & Heaps</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>BST Validation & Operations</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Inorder Successor/Predecessor</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Top-K Elements using Heaps</span>
+                </div>
+                <div class="pattern-item">
+                  <span>K-sorted Lists & Median Problems</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Dijkstra's Algorithm Basics</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 7: Advanced Searching & Backtracking</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Binary Search on Answer Space</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Search in Rotated & Special Arrays</span>
+                </div>
+                <div class="pattern-item">
+                  <span>N-Queens & Sudoku Solvers</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Backtracking with Pruning</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Word Search & Maze Problems</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 8: Graph Fundamentals</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>DFS & BFS Applications</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Topological Sort (Kahn + DFS)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Cycle Detection (Directed/Undirected)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Connected Components & Union-Find</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Shortest Path Basics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-🛠 Fix: Use “Think First” sessions:
-<ul>
-<li>Try for 20 minutes without looking.
-<li>Even brute-force is okay at first — then refine.
-<li>If stuck, ask ChatGPT to hint, not solve — like :<br>
-"Can you guide me through this step-by-step without showing the full code?"
-</ul>
-</div>
+        <!-- Month 3 Content -->
+        <div class="month-content" id="month-3">
+          <div class="month-header">
+            <h3>Month 3: Advanced Patterns & Problem Solving</h3>
+          </div>
+          <div class="week-grid">
+            <div class="week-card">
+              <h4>Week 9: Dynamic Programming - I</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>1D DP (Fibonacci, Climbing Stairs)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>0/1 Knapsack & Variations</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Unbounded Knapsack & Coin Change</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Subset Sum & Partition Problems</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Matrix DP (Unique Paths, Min Path Sum)</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 10: Dynamic Programming - II</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Longest Common Subsequence (LCS)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Longest Increasing Subsequence (LIS)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Edit Distance & String Matching</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Palindromic Subsequence/Substring</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Matrix Chain Multiplication (MCM)</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 11: Advanced Data Structures</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Segment Trees (Range Queries)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Fenwick Trees (Binary Indexed Trees)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Trie (Prefix Tree) Applications</span>
+                </div>
+                <div class="pattern-item">
+                  <span>LRU Cache Design & Implementation</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Disjoint Set Union Advanced Usage</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 12: Greedy Algorithms</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Interval Scheduling & Merging</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Activity Selection & Meeting Rooms</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Gas Station & Job Sequencing</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Minimum Platforms & Scheduling</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Huffman Encoding Implementation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<div>
-❗2. Mock Interviews (Timed + Verbal Explanation)<br><br>
-Google won’t just give you a problem — they want:<br>
+        <!-- Month 4 Content -->
+        <div class="month-content" id="month-4">
+          <div class="month-header">
+            <h3>Month 4: Mastery, Integration & Mock Interviews</h3>
+          </div>
+          <div class="week-grid">
+            <div class="week-card">
+              <h4>Week 13: Advanced Algorithms</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>KMP & Rabin-Karp String Matching</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Manacher's Algorithm (LPS)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Binary Lifting for LCA</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Sparse Table (RMQ)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Meet-in-the-Middle Technique</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 14: Advanced Graph Algorithms</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Minimum Spanning Tree (Prim/Kruskal)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Shortest Path (Dijkstra, Bellman-Ford)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Bipartite Graph & Network Flow</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Bridges & Articulation Points</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Strongly Connected Components</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 15: Advanced DP & Hybrid Patterns</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Digit DP & Counting Problems</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Bitmask DP (TSP, Subset Problems)</span>
+                </div>
+                <div class="pattern-item">
+                  <span>DP on Trees & Rerooting</span>
+                </div>
+                <div class="pattern-item">
+                  <span>DAG DP & Topological DP</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Trie + DP Hybrid Problems</span>
+                </div>
+              </div>
+            </div>
+            <div class="week-card">
+              <h4>Week 16: Revision & Interview Prep</h4>
+              <div class="pattern-list">
+                <div class="pattern-item">
+                  <span>Blind 75 & Top Interview Questions</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Company-specific Problem Patterns</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Hard Problem Strategies</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Mock Interview Preparation</span>
+                </div>
+                <div class="pattern-item">
+                  <span>Time & Space Complexity Mastery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<ul>
-<li>How you approach it out loud
-<li>What edge cases you consider
-<li>Whether you explain your intuition and complexity
-</ul>
+    <div class="tab-content" id="patterns">
+      <h2>All DSA Patterns - Complete Reference</h2>
+      <p>Master these patterns to solve any DSA problem efficiently. <span class="star">★</span> indicates most
+        important patterns.</p>
 
-🛠 Fix:
-<ul>
-<li>Do 1 mock/week using Pramp, Excalidraw + voice, or even record yourself explaining.
-<li>Or ask me: “Give me a random Medium-level DSA mock interview question and walk me through it.”
-</ul>
-</div>
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <h3>1. Two Pointers <span class="star">★★</span></h3>
+          <ul>
+            <li>Pair sum (Two Sum sorted)</li>
+            <li>Remove duplicates</li>
+            <li>Palindrome check</li>
+            <li>Reverse array/string</li>
+          </ul>
+        </div>
 
-<div>
-❗3. Revisiting Old Problems (Spaced Repetition)<br><br>
-You might solve 222 problems, but forget 100 of them after 3 weeks.<br>
-🛠 Fix:
+        <div class="pattern-card">
+          <h3>2. Sliding Window <span class="star">★★</span></h3>
+          <ul>
+            <li>Longest substring without repeating characters</li>
+            <li>Max sum subarray of size k</li>
+            <li>Minimum window substring</li>
+            <li>Fixed & Variable size windows</li>
+          </ul>
+        </div>
 
-Use a spaced repetition list:
-<ul>
-<li>⭐ Mark “repeat later” problems in your tracker
-<li>Review these every 1–2 weeks
-<li>Try solving without looking again
-</ul>
-</div>
+        <div class="pattern-card">
+          <h3>3. Fast & Slow Pointers <span class="star">★</span></h3>
+          <ul>
+            <li>Cycle detection (Linked List)</li>
+            <li>Middle of linked list</li>
+            <li>Detect palindrome in linked list</li>
+            <li>Tortoise-Hare algorithm</li>
+          </ul>
+        </div>
 
-<div>
-❗4. Do Real-World Use Case DSA<br><br>
-SRE interviews may sometimes involve applying DSA in system-level problems like:<br>
-<ul>
-<li>Rate limiters (queues, maps)
-<li>Load balancing (heap, hashing)
-<li>Monitoring (sliding window, prefix sum)
-<li>Caching (LRU – design + DSA)
-</ul>
-🛠 Fix:
-<ul>
-<li>Pick 1–2 such system-oriented DSA problems per week.
-<li>I can give you a curated list just for that if you want.
-<ul>
-</div>
-</section>
-<h2>Work Now 🧐</h2>
-<section class="sec5">
-<div>
-Update your progress here : <a target="_blank" href= "https://docs.google.com/spreadsheets/d/1TtjerPx4fxOragfQKHJOPMv5B256cI99/edit?usp=sharing&ouid=100460215473701826376&rtpof=true&sd=true"> DSA Pattern Book.xlsx</a><br>
-Open Leetcode : <a target="_blank" href="https://leetcode.com/problemset/">https://leetcode.com/problemset/</a><br>
-Apna College : <a target="_blank" href="https://docs.google.com/spreadsheets/d/1vxsDzS8eLnpzxxAXP6Gomqg2la1GTIvCwqCXWzXosvI/edit?usp=sharing">DSA SHEET(Apna College)</a>
-</div>
+        <div class="pattern-card">
+          <h3>4. Binary Search <span class="star">★</span></h3>
+          <ul>
+            <li>Search in sorted array</li>
+            <li>Search on answer (min/max threshold)</li>
+            <li>Peak element</li>
+            <li>Rotated sorted array</li>
+          </ul>
+        </div>
 
-<div>
-<img src="https://leetcard.jacoblin.cool/dattu145233?theme=dark&ext=activity" />
-</div>
-</section>
+        <div class="pattern-card">
+          <h3>5. HashMap / HashSet <span class="star">★</span></h3>
+          <ul>
+            <li>Two sum</li>
+            <li>Anagrams</li>
+            <li>Frequency counting</li>
+            <li>Detect duplicates</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>6. Prefix Sum & Prefix XOR</h3>
+          <ul>
+            <li>Subarray sum queries</li>
+            <li>Count subarrays with certain sum/XOR</li>
+            <li>Range queries</li>
+            <li>Difference arrays</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>7. Monotonic Stack</h3>
+          <ul>
+            <li>Next greater element</li>
+            <li>Largest rectangle in histogram</li>
+            <li>Daily temperatures</li>
+            <li>Stock span problem</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>8. Priority Queue / Heap <span class="star">★</span></h3>
+          <ul>
+            <li>Top K elements</li>
+            <li>Merge k sorted lists</li>
+            <li>K closest points</li>
+            <li>Dijkstra's Algorithm</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>9. Backtracking <span class="star">★</span></h3>
+          <ul>
+            <li>Subsets</li>
+            <li>Permutations</li>
+            <li>N-Queens</li>
+            <li>Combination sum</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>10. Dynamic Programming <span class="star">★★</span></h3>
+          <ul>
+            <li>1D DP (Fibonacci, Climbing stairs)</li>
+            <li>2D DP (LCS, Edit distance)</li>
+            <li>Knapsack patterns</li>
+            <li>DP on grids</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>11. Tree Traversals <span class="star">★</span></h3>
+          <ul>
+            <li>DFS (Pre, In, Post order)</li>
+            <li>BFS / Level Order</li>
+            <li>Height / Depth</li>
+            <li>Path sum problems</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>12. Graph Traversals <span class="star">★</span></h3>
+          <ul>
+            <li>DFS / BFS</li>
+            <li>Connected components</li>
+            <li>Flood fill</li>
+            <li>Cycle detection</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>13. Topological Sort</h3>
+          <ul>
+            <li>Course schedule</li>
+            <li>Dependency resolution</li>
+            <li>Detect cycle in directed graph</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>14. Union-Find (Disjoint Set)</h3>
+          <ul>
+            <li>Cycle detection</li>
+            <li>Connected components</li>
+            <li>Kruskal's MST</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>15. Trie (Prefix Tree)</h3>
+          <ul>
+            <li>Autocomplete</li>
+            <li>Word search</li>
+            <li>Prefix matching</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>16. Bit Manipulation</h3>
+          <ul>
+            <li>Finding single number using XOR</li>
+            <li>Checking power of two</li>
+            <li>Subset generation using bitmasks</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>17. Greedy Algorithms</h3>
+          <ul>
+            <li>Interval scheduling</li>
+            <li>Activity selection</li>
+            <li>Huffman coding</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>18. Advanced Graph Algorithms</h3>
+          <ul>
+            <li>Dijkstra's Algorithm</li>
+            <li>Bellman-Ford</li>
+            <li>Floyd-Warshall</li>
+            <li>Minimum Spanning Tree</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>19. String Matching Algorithms</h3>
+          <ul>
+            <li>KMP Algorithm</li>
+            <li>Rabin-Karp</li>
+            <li>Z-Algorithm</li>
+          </ul>
+        </div>
+
+        <div class="pattern-card">
+          <h3>20. Advanced Data Structures</h3>
+          <ul>
+            <li>Segment Trees</li>
+            <li>Fenwick Trees</li>
+            <li>Suffix Arrays</li>
+            <li>LRU Cache</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>DSA Mastery Plan - Your Journey to 50 LPA Starts Here</p>
+      <p>Stay Consistent, Stay Focused, You've Got This! 💪</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set up month tab navigation
+    document.querySelectorAll('.month-tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        // Remove active class from all month tabs and contents
+        document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.month-content').forEach(c => c.classList.remove('active'));
+
+        // Add active class to clicked tab and corresponding content
+        this.classList.add('active');
+        const monthId = this.getAttribute('data-month');
+        document.getElementById(`month-${monthId}`).classList.add('active');
+      });
+    });
+
+    // Set up main tab navigation
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', function () {
+          // Remove active class from all tabs and contents
+          document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+          // Add active class to clicked tab and corresponding content
+          this.classList.add('active');
+          const tabId = this.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
