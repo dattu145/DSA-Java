@@ -1,18 +1,3 @@
-// File: Easy/Arrays/RemoveDuplicatesFromSortedArrays.java
-
-/*
-
- - Problem: Remove duplicates from sorted arrays
- - Level: Easy
- - Source: LeetCode #26
- - Approach : Two pointers
- - Time : 0(n)
- - Space : 0(1)
- 
- // Condition : if slow != fast; slow++ and value of slow equals value of fast
-
- */
-
 public class RemoveDuplicatesFromSortedArrays{
     public static int removeDuplicates(int[] nums){
         int slow = 0;
