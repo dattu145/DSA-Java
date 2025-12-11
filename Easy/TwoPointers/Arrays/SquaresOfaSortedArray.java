@@ -11,7 +11,7 @@ public class SquaresOfaSortedArray {
     public static int[] squares(int[] arr){
         int n = arr.length;
         int[] result = new int[n];
-        int pos = n -1;
+        int pos = n - 1;
         int left = 0, right = n-1;
         while(left <= right){
             if(Math.abs(arr[left]) > Math.abs(arr[right])){
@@ -25,8 +25,6 @@ public class SquaresOfaSortedArray {
             pos--;
         }
         return result;
-
-
     }
     public static void main(String[] args) {
         int[] arr = {-4,-2,1,3,9};

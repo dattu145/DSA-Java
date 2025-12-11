@@ -1,5 +1,3 @@
-package Medium.Arrays;
-
 public class ContainerWithMaxWater {
     public static int maxArea(int[] heights){
 

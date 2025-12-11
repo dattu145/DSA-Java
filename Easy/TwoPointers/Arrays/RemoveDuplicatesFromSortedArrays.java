@@ -9,6 +9,8 @@
  - Time : 0(n)
  - Space : 0(1)
  
+ // Condition : if slow != fast; slow++ and value of slow equals value of fast
+
  */
 
 public class RemoveDuplicatesFromSortedArrays{
