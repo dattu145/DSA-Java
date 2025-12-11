@@ -1,5 +1,3 @@
-// String are Immutable and cannot be modified so, first we convert them into an Char array, then swap.
-
 public class ReverseAString{
     public static String reverse(String name){
         char[] arr = name.toCharArray();

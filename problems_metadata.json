@@ -47,7 +47,7 @@
   "Easy/MajorityElement.java": {
     "intuition": "Use Boyer–Moore voting to find the element that occurs more than n/2 times.",
     "technique": "Greedy / Voting Algorithm",
-    "timeComplexity": "O(N)",
+    "timeComplexity": "O(N^2)",
     "spaceComplexity": "O(1)"
   },
   "Easy/RemoveElement.java": {
@@ -65,7 +65,7 @@
 
   "Easy/TwoPointers/Arrays/BestTimeToBuyAndSellStock.java": {
     "intuition": "Track the lowest buy price and calculate max profit greedily.",
-    "technique": "Two Pointers / Single Pass",
+    "technique": "Two Pointers",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },
@@ -76,13 +76,13 @@
     "spaceComplexity": "O(1)"
   },
   "Easy/TwoPointers/Arrays/MoveZeros.java": {
-    "intuition": "Shift non-zero elements left and fill remaining with zeros.",
+    "intuition": "If fast != 0, swap with slow and increment slow",
     "technique": "Two Pointers",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },
   "Easy/TwoPointers/Arrays/RemoveDuplicatesFromSortedArrays.java": {
-    "intuition": "Keep track of unique elements by overwriting duplicates.",
+    "intuition": "If slow != fast; slow++ and value of slow equals value of fast.",
     "technique": "Two Pointers",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
@@ -95,7 +95,7 @@
   },
   "Easy/TwoPointers/Arrays/TwoSum_II.java": {
     "intuition": "Move left or right pointer based on sum comparison.",
-    "technique": "Two Pointers / Binary Search Alternative",
+    "technique": "Two Pointers",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },

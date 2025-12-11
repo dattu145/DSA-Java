@@ -1,5 +1,3 @@
-// String palindrome - Two Pointers
-
 public class validPalindrome{
     public static boolean Palindrome(String str){
         int left = 0, right = str.length()-1;

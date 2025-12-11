@@ -1,5 +1,3 @@
-// Arrays - 3Sum - Two pointers (Sort first then apply TwoSum) - Medium
-
 import java.util.*;
 
 public class ThreeSum{

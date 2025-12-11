@@ -1,16 +1,3 @@
-// File: Easy/Arrays/RemoveElement.java
-
-/*
-
- - Problem: Remove Element
- - Level: Easy
- - Source: LeetCode #27
- - Approach : Two pointers
- - Time : 0(n)
- - Space : 0(1)
- 
- */
-
 public class RemoveElement {
 
     public static int removeElement(int[] nums, int val){

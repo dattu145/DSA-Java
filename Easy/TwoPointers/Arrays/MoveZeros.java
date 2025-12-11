@@ -1,8 +1,3 @@
-// Arrays - moveZeros -Two Pointers - Easy
-
-// Slow & fast starts from index 0
-// Condition : if fast != 0, swap with slow and increment slow
-
 public class MoveZeros {
     public static void moveZeros(int[] arr) {
         int slow = 0;

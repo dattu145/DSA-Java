@@ -1,10 +1,3 @@
-/*
-    Problem : Squares of a Sorted Array
-    Time Complexity : O(n)
-    Space Complexity : O(1)
- 
- */
-
 import java.util.Arrays;
 
 public class SquaresOfaSortedArray {

@@ -1,12 +1,3 @@
-// Majority Element in an Array could be find using three approaches,
-
-// 1). Brute force approach - O(n^2)
-// 2). Sorting and then finding the majority element - O(n log n) - more optimal than brute force.
-//         Sorting : O(n log n);   loop : O(n)  =>  O(n log n) + O(n) = O(n log n);
-// 3). Moore's algorithm - O(n)
-
-// Leetcode prob : 169
-
 import java.util.Arrays;
 
 public class MajorityElement{
