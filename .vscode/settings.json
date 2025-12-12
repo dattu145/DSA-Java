@@ -1,9 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "Medium/TwoPointers/Arrays",
-        "Easy/TwoPointers/Strings",
-        "Easy/TwoPointers/Arrays",
-        "Algorithms/Sorting"
-    ],
-    "java.debug.settings.onBuildFailureProceed": true
-}
