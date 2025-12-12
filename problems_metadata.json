@@ -5,7 +5,6 @@
     "timeComplexity": "O(N^2)",
     "spaceComplexity": "O(1)"
   },
-
   "Basics/binaryToDecimal.java": {
     "intuition": "Convert each binary digit to its decimal weight using powers of 2.",
     "technique": "Math / Bit Manipulation",
@@ -18,7 +17,6 @@
     "timeComplexity": "O(logN)",
     "spaceComplexity": "O(1)"
   },
-
   "Basics/fundamentals/Armstrong.java": {
     "intuition": "Check if the sum of each digit raised to its count equals the number.",
     "technique": "Number Theory",
@@ -43,7 +41,6 @@
     "timeComplexity": "O(sqrt(N))",
     "spaceComplexity": "O(1)"
   },
-
   "Easy/MajorityElement.java": {
     "intuition": "Use Boyer–Moore voting to find the element that occurs more than n/2 times.",
     "technique": "Greedy / Voting Algorithm",
@@ -62,7 +59,6 @@
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },
-
   "Easy/TwoPointers/Arrays/BestTimeToBuyAndSellStock.java": {
     "intuition": "Track the lowest buy price and calculate max profit greedily.",
     "technique": "Two Pointers",
@@ -99,7 +95,6 @@
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },
-
   "Easy/TwoPointers/Strings/ReverseAString.java": {
     "intuition": "Swap characters from both ends until pointers meet.",
     "technique": "Two Pointers",
@@ -112,7 +107,6 @@
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },
-
   "JCF/ArrayLists.java": {
     "intuition": "Demonstration of dynamic array operations.",
     "technique": "Java Collections Framework",
@@ -125,7 +119,6 @@
     "timeComplexity": "Average O(1)",
     "spaceComplexity": "O(N)"
   },
-
   "Medium/TwoPointers/Arrays/ContainerWithMaxWater.java": {
     "intuition": "Shrink the pointer of the shorter line to maximize area.",
     "technique": "Two Pointers",
@@ -150,10 +143,15 @@
     "timeComplexity": "O(N^2)",
     "spaceComplexity": "O(1)"
   },
-
   "Medium/TwoPointers/RomanToInteger.java": {
     "intuition": "Scan from left to right and subtract for special cases.",
     "technique": "Hash Map / Pattern Matching",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/SlidingWindow/MinimumSizeSubarraySum.java": {
+    "intuition": "Use a sliding window because all numbers are positive. Expand the window with the right pointer to increase sum, and shrink from the left to find the smallest valid window.",
+    "technique": "Sliding Window (Two Pointers)",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   }
