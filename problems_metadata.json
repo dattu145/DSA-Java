@@ -1,0 +1,158 @@
+{
+  "Algorithms/Sorting/BubbleSort.java": {
+    "intuition": "Repeatedly push the largest element to the end by comparing adjacent elements.",
+    "technique": "Basic Sorting",
+    "timeComplexity": "O(N^2)",
+    "spaceComplexity": "O(1)"
+  },
+  "Basics/binaryToDecimal.java": {
+    "intuition": "Convert each binary digit to its decimal weight using powers of 2.",
+    "technique": "Math / Bit Manipulation",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Basics/decimalToBinary.java": {
+    "intuition": "Divide by 2 repeatedly and collect remainders to form binary representation.",
+    "technique": "Math / Bit Manipulation",
+    "timeComplexity": "O(logN)",
+    "spaceComplexity": "O(1)"
+  },
+  "Basics/fundamentals/Armstrong.java": {
+    "intuition": "Check if the sum of each digit raised to its count equals the number.",
+    "technique": "Number Theory",
+    "timeComplexity": "O(D)",
+    "spaceComplexity": "O(1)"
+  },
+  "Basics/fundamentals/FibonacciNumber.java": {
+    "intuition": "Build Fibonacci numbers iteratively using previous two values.",
+    "technique": "DP / Recurrence",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Basics/fundamentals/Palindrome.java": {
+    "intuition": "Reverse the digits and compare with the original.",
+    "technique": "Two-Pointer / Math",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Basics/fundamentals/PrimeNumberCheck.java": {
+    "intuition": "Check divisibility until sqrt(n).",
+    "technique": "Number Theory",
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/MajorityElement.java": {
+    "intuition": "Use Boyer–Moore voting to find the element that occurs more than n/2 times.",
+    "technique": "Greedy / Voting Algorithm",
+    "timeComplexity": "O(N^2)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/RemoveElement.java": {
+    "intuition": "Use two pointers to overwrite unwanted values.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/RepeatingAndMissingValues.java": {
+    "intuition": "Use extra XOR/Math to detect repeated and missing values.",
+    "technique": "Math / Hashing",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Arrays/BestTimeToBuyAndSellStock.java": {
+    "intuition": "Track the lowest buy price and calculate max profit greedily.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Arrays/MergeSortedArray.java": {
+    "intuition": "Merge from the back to avoid overwriting values.",
+    "technique": "Two Pointers / Merge Technique",
+    "timeComplexity": "O(N+M)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Arrays/MoveZeros.java": {
+    "intuition": "If fast != 0, swap with slow and increment slow",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Arrays/RemoveDuplicatesFromSortedArrays.java": {
+    "intuition": "If slow != fast; slow++ and value of slow equals value of fast.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Arrays/SquaresOfaSortedArray.java": {
+    "intuition": "Square from both ends and place the largest in output from end.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)"
+  },
+  "Easy/TwoPointers/Arrays/TwoSum_II.java": {
+    "intuition": "Move left or right pointer based on sum comparison.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Strings/ReverseAString.java": {
+    "intuition": "Swap characters from both ends until pointers meet.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/TwoPointers/Strings/validPalindrome.java": {
+    "intuition": "Use two pointers while skipping non-alphanumeric characters.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "JCF/ArrayLists.java": {
+    "intuition": "Demonstration of dynamic array operations.",
+    "technique": "Java Collections Framework",
+    "timeComplexity": "Varies",
+    "spaceComplexity": "Varies"
+  },
+  "JCF/HashMaps.java": {
+    "intuition": "Shows how key-value hashing works in Java.",
+    "technique": "Hash Map / Hashing",
+    "timeComplexity": "Average O(1)",
+    "spaceComplexity": "O(N)"
+  },
+  "Medium/TwoPointers/Arrays/ContainerWithMaxWater.java": {
+    "intuition": "Shrink the pointer of the shorter line to maximize area.",
+    "technique": "Two Pointers",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/TwoPointers/Arrays/FourSum.java": {
+    "intuition": "Fix two pointers and use inner two-pointer technique for remaining pair.",
+    "technique": "Two Pointers + Sorting",
+    "timeComplexity": "O(N^3)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/TwoPointers/Arrays/SortColors.java": {
+    "intuition": "Use Dutch National Flag algorithm to partition colors.",
+    "technique": "Three-Pointer / Partitioning",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/TwoPointers/Arrays/ThreeSum.java": {
+    "intuition": "Sort the array and use two pointers for each fixed value.",
+    "technique": "Two Pointers + Sorting",
+    "timeComplexity": "O(N^2)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/TwoPointers/RomanToInteger.java": {
+    "intuition": "Scan from left to right and subtract for special cases.",
+    "technique": "Hash Map / Pattern Matching",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/SlidingWindow/MinimumSizeSubarraySum.java": {
+    "intuition": "Use a sliding window because all numbers are positive. Expand the window with the right pointer to increase sum, and shrink from the left to find the smallest valid window.",
+    "technique": "Sliding Window (Two Pointers)",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  }
+}
