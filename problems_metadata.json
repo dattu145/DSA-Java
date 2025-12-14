@@ -149,9 +149,15 @@
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   },
-  "Medium/SlidingWindow/MinimumSizeSubarraySum.java": {
+  "Medium/SlidingWindow/Arrays/MinimumSizeSubarraySum.java": {
     "intuition": "Use a sliding window because all numbers are positive. Expand the window with the right pointer to increase sum, and shrink from the left to find the smallest valid window.",
     "technique": "Sliding Window (Two Pointers)",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/SlidingWindow/Strings/PermutationInStrings.java": {
+    "intuition": "A permutation has the same character counts regardless of order. Use a fixed-size sliding window of length s1 over s2 and compare character frequencies to detect when a window matches s1.",
+    "technique": "Sliding Window with Frequency Array",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
   }
