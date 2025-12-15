@@ -1,4 +1,4 @@
-package Medium.Arrays;
+package Medium.TwoPointers;
 import java.util.*;
 
 public class RomanToInteger {

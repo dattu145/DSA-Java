@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class PermutationInStrings {
     public static boolean checkInclusion(String s1, String s2) {
 

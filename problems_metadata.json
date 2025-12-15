@@ -160,5 +160,29 @@
     "technique": "Sliding Window with Frequency Array",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
+  },
+  "Easy/SlidingWindow/Arrays/DefuseABomb.java": {
+    "intuition": "Each element in the output depends on the sum of the next k or previous k elements in a circular array. Use a sliding window of size k to compute sums efficiently without recomputing each time.",
+    "technique": "Sliding Window / Circular Array Handling",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N) // for the output array"
+  },
+  "Easy/SlidingWindow/Arrays/MaximumAverageSubArrayI.java": {
+    "intuition": "To find the maximum average of a subarray of fixed length k, maintain a sliding window sum of size k and update the maximum sum as the window moves.",
+    "technique": "Fixed-size Sliding Window / Prefix Sum",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/SlidingWindow/Arrays/GrumpyBookstoreOwner.java": {
+    "intuition": "Customers are satisfied when the owner is not grumpy. Use a sliding window of size X to flip grumpy minutes into satisfied ones, and maximize the additional satisfied customers.",
+    "technique": "Sliding Window / Fixed-size Window / Prefix Sum Concept",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Medium/SlidingWindow/Strings/FindAllAnagramsInAString.java": {
+    "intuition": "An anagram has the same character counts as the target string. Slide a window of target string length over the main string, and track character frequencies to find all starting indices that match.",
+    "technique": "Sliding Window with Frequency Map / Hash Map",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1) // if we use fixed alphabet size array"
   }
 }
