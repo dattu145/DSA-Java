@@ -29,10 +29,10 @@ public class DefuseABomb {
             result[i] = sum;
 
             sum -= code[start % n];
-            start++;
-
-            end++;
             sum += code[end % n];
+            
+            start++;
+            end++;
         }
 
         return result;

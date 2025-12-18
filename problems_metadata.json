@@ -184,5 +184,17 @@
     "technique": "Sliding Window with Frequency Map / Hash Map",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1) // if we use fixed alphabet size array"
+  },
+  "Medium/SlidingWindow/Strings/LongestSubstringWithoutRepeatingCharacters.java": {
+    "intuition": "Maintain a window with all unique characters. Expand the window by moving the right pointer, and when a duplicate is found, shrink the window from the left until all characters are unique again. Track the maximum window size during the process.",
+    "technique": "Sliding Window with HashSet / Frequency Array",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1) // O(128) for ASCII characters, treated as constant"
+  },
+  "Easy/SlidingWindow/Arrays/DietPlanPerformance.java": {
+      "intuition": "Calculate the sum of the first window of size k. Then slide the window across the array by removing the leftmost element and adding the new rightmost element. For each window sum, adjust the score based on whether it falls below, within, or above the given thresholds.",
+      "technique": "Fixed Size Sliding Window",
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(1)"
   }
 }

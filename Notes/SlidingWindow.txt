@@ -1,0 +1,46 @@
+For fixed-size sliding window,
+
+✅ Approach 1: Two-Pointer (Explicit Window),
+
+windowSum -= nums[left];
+windowSum += nums[right];
+left++;
+right++;
+
+
+✅ Approach 2: Index-Based (Mathematical Slide),
+
+windowSum += nums[i] - nums[i - k];
+
+🔥 Approach #2 is the winner
+
+Interviewers expect:
+windowSum += nums[i] - nums[i - k];
+
+---------------------------------
+
+✅ Fixed-Size Sliding Window → for loop (BEST choice)
+🔥 Variable-Size Sliding Window → while loop (MANDATORY)
+
+🧠 Golden Interview Rule (Memorize)
+
+Fixed window  → for loop
+Variable window → while loop (inside a for loop)
+
+🔑 Universal Variable Sliding Window Template (MEMORIZE)
+
+int left = 0;
+for (int right = 0; right < n; right++) {
+
+    // 1. expand window
+    add(nums[right]);
+
+    // 2. shrink while invalid or condition satisfied
+    while (window is invalid) {
+        remove(nums[left]);
+        left++;
+    }
+
+    // 3. update answer
+    updateAnswer();
+}

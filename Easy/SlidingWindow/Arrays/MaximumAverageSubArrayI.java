@@ -31,20 +31,20 @@ public class MaximumAverageSubArrayI{
 /* Approach 2 to slide a window
 
 int left = 0;
-int right = k - 1;
+int right = k;
 double windowSum = 0;
 
-for (int i = left; i <= right; i++) {
+for (int i = left; i < right; i++) {
     windowSum += nums[i];
 }
 
 double maxSum = windowSum;
 
-while (right + 1 < nums.length) {
-    right++; 
-    windowSum += nums[right];
+while (right < nums.length) {
     windowSum -= nums[left]; 
+    windowSum += nums[right];
     left++;                   
+    right++;
 
     maxSum = Math.max(maxSum, windowSum);
 }
