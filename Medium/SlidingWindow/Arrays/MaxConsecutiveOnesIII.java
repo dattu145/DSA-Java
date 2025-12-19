@@ -1,6 +1,6 @@
 package Medium.SlidingWindow.Arrays;
 
-public class MaxConsectiveOnesIII {
+public class MaxConsecutiveOnesIII {
     public static int longestOnes(int[] nums, int k){
         int countZeros = 0;
         int maxLen = 0;
