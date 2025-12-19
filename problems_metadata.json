@@ -196,5 +196,17 @@
       "technique": "Fixed Size Sliding Window",
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(1)"
+  },
+    "Medium/SlidingWindow/Arrays/MaxConsecutiveOnesIII.java": {
+    "intuition": "right expands; zero++ → if zero > k, left++ until valid.",
+    "technique": "Variable Size Sliding Window (At most K zeros)",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+    "Easy/SlidingWindow/Arrays/MaxConsecutiveOnes.java": {
+    "intuition": "Keep extending; on zero → left = right + 1; maxCount = Math.max(maxCount, right - left + 1)",
+    "technique": "Sliding Window with Hard Reset",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
   }
 }
