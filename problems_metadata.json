@@ -208,5 +208,23 @@
     "technique": "Sliding Window with Hard Reset",
     "timeComplexity": "O(N)",
     "spaceComplexity": "O(1)"
+  },
+   "Medium/SlidingWindow/Arrays/LongestSubstringAfterDeletingOneElement.java": {
+    "intuition": "Expand window; allow at most one zero. If zeros > 1, shrink from left. Track max window length and subtract 1 for the deleted element.",
+    "technique": "Variable-size Sliding Window (At most 1 invalid element)",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
+  },
+  "Easy/SlidingWindow/Arrays/ContainDuplicatesII.java": {
+    "intuition": "Maintain a window of size k using a HashSet. If current element already exists in set, duplicate found within range.",
+    "technique": "Fixed-size Sliding Window with HashSet",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(K)"
+  },
+  "Easy/SlidingWindow/Strings/FindKBeautyOfaNumber.java": {
+    "intuition": "Slide a fixed window of length k over the string number. Convert substring to int and count if it divides the original number.",
+    "technique": "Fixed-size Sliding Window using String Substring",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)"
   }
 }
