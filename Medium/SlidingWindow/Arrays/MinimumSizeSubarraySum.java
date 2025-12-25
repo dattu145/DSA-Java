@@ -1,3 +1,5 @@
+package Medium.SlidingWindow.Arrays;
+
 public class MinimumSizeSubarraySum {
     public static int minSubLen(int[] arr, int target) {
         int left = 0;

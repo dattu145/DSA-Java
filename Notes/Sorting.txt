@@ -1,0 +1,32 @@
+// Bubble Sort,
+
+Approach : Swap the smallest with the largest making sure all largest are at the end.
+- Has nested loop
+- First loop runs till n-1 (loop i)
+- Second loop runs till n-i-1 (loop j)
+- if nums[j] > nums[j+1] swap;
+Time Complexity: O(n^2)
+
+
+
+// Selecton Sort,
+
+- First loop runs till n-1 (loop i)
+- Initialize smallest = i
+- Second loop runs till n (j = i+1)
+  - if(arr[smallest] > arr[j]) then smallest = j;
+- swap outside the innerloop
+Time Complexity : O(n^2)
+
+
+// Insertion Sort,
+
+- We have a sorted part & a unsorted part
+- unsorted part starts from index 1 (so outerloop(i) starts from 1);
+- current value = arr[i]
+- j = i - 1;
+- while j less than or equal to zero and current < arr[j]
+    assign arr[j+1] as arr[j]
+    j-- (this only checks whether our current value is less than j and moves the values accordingly)
+- arr[j+1] = current (this is where actual placing of current value into the sorted part happens)
+

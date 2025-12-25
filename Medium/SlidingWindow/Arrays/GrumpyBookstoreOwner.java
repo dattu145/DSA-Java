@@ -1,3 +1,5 @@
+package Medium.SlidingWindow.Arrays;
+
 public class GrumpyBookstoreOwner {
     public static int MostSatisfied(int[] customers, int[] grumpy, int minutes){
         int n = customers.length;
