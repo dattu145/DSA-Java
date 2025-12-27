@@ -78,7 +78,7 @@ Easy/
 
 - [LinkedIn](https://www.linkedin.com/in/datta-vignesh-b09437223/)
 - Mail: dattavignesh001@gmail.com
-- Blog / Portfolio: dattavigneshportfolio.onrender.com
+- Blog / Portfolio: [Portfolio](dattavigneshportfolio.onrender.com)
 
 ---
 
