@@ -12,7 +12,7 @@ public class InsertionSort {
         }
     }
     public static void main(String[] args) {
-        int[] nums = {6,3,5,1,2,8,9};
+        int[] nums = {6,3,5,1,2};
         sort(nums);
 
         for(int num : nums){
