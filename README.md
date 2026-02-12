@@ -1,95 +1,138 @@
 # DSA + LeetCode in Java
 
-Welcome to my **Data Structures and Algorithms (DSA)** learning repository!  
-Here, I practice and solve problems from **LeetCode** using **Java**, while building a strong foundation in DSA concepts.  
-This repository is organized by topic-wise folders and includes explanations, code, and my learning notes.
+Welcome to my **Data Structures and Algorithms (DSA)** learning repository.
+
+This repository contains my structured DSA preparation in **Java**, where I solve problems from platforms like **LeetCode** and organize them by:
+
+- Concept (Arrays, Sliding Window, Two Pointers, etc.)
+- Difficulty (Easy / Medium / Hard)
+
+The goal is to build deep problem-solving ability and prepare for software engineering interviews.
 
 ---
 
-## What's in this Repo?
+## Repository Structure
 
-- **LeetCode Solutions** in Java
-- Topic-wise structured DSA concepts
-- Clean folder structure
-- Learning notes and comments for understanding
-- Updated regularly as I learn and grow
+The repository follows a **concept-first structure**, and each concept contains problems categorized by difficulty.
 
----
-
-## Structure
-
-Easy/
-
+DSA-Java/
 │
-
 ├── Arrays/
-
-│ ├── TwoSum.java
-
-│ ├── BestTimeToBuySellStock.java
-
-│ └── ...
-
+│ ├── Easy/
+│ ├── Medium/
+│ └── Hard/
 │
-
+├── SlidingWindow/
+│ ├── Easy/
+│ ├── Medium/
+│ └── Hard/
+│
+├── TwoPointers/
+│ ├── Easy/
+│ ├── Medium/
+│ └── Hard/
+│
+├── Sorting/
+│ ├── Easy/
+│ ├── Medium/
+│ └── Hard/
+│
 ├── Strings/
-
-│ ├── ValidAnagram.java
-
-│ ├── LongestPalindrome.java
-
-│ └── ...
-
-|
-
+│ ├── Easy/
+│ ├── Medium/
+│ └── Hard/
 │
+├── Searching/
+│ ├── Easy/
+│ ├── Medium/
+│ └── Hard/
+│
+├── Basics/
+├── JavaCollections/
+├── Notes/
 └── README.md
 
+
+This structure allows:
+- Clear revision by concept
+- Tracking difficulty progression
+- Easy scalability when adding Trees, Graphs, DP, etc.
+
+---
+
+## Concepts Covered So Far
+
+- Arrays
+- Sliding Window
+- Two Pointers
+- Sorting Algorithms
+- Binary Search
+- String-based Problems
+- Java Collections Framework
+- Programming Fundamentals
+
+More concepts (LinkedList, Stack, Queue, Trees, Graphs, DP, Greedy) will be added progressively.
 
 ---
 
 ## Goals
 
-- Crack LeetCode 🔥
-- Build strong DSA problem-solving skills
-- Prepare for SDE/SRE interviews
-- Stay consistent with daily problem solving
+- Master core DSA patterns
+- Improve problem-solving speed and accuracy
+- Prepare for SDE roles
+- Build consistency with daily coding
+- Transition from Easy → Medium → Hard confidently
 
 ---
 
 ## Tech Stack
 
-- **Language**: Java
-- **Platform**: [LeetCode](https://leetcode.com/)
-- **Tools**: VS Code, Git
+- **Language:** Java
+- **Platform:** LeetCode
+- **Tools:** VS Code, Git, Linux
 
 ---
 
-## Study Plan
+## Study Approach
 
-- Solve 1–2 DSA concepts per week
-- Daily LeetCode problems (Easy → Hard)
-- Weekly topic revision and notes
-- Contest participation
+- Practice problems concept-wise
+- Gradually increase difficulty
+- Maintain notes for patterns
+- Revise previously solved problems weekly
+- Focus on understanding patterns over memorizing solutions
+
+---
+
+## Why This Structure?
+
+Instead of separating only by difficulty, this repo uses:
+
+> Concept → Difficulty → Problems
+
+This mirrors real interview preparation, where:
+- Interviewers test patterns
+- Difficulty increases gradually
+- Concept clarity matters more than quantity
 
 ---
 
 ## Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/datta-vignesh-b09437223/)
-- Mail: dattavignesh001@gmail.com
-- Blog / Portfolio: [Portfolio](https://dattavigneshportfolio.onrender.com)
+- LinkedIn: https://www.linkedin.com/in/datta-vignesh-b09437223/
+- Email: dattavignesh001@gmail.com
+- Portfolio: https://dattavigneshportfolio.onrender.com
 
 ---
 
-## 🤝 Contributions
+## Contributions
 
-This is my personal learning repo — but if you find bugs, improvements, or want to share better solutions, feel free to open issues or PRs!
+This is my personal learning repository.  
+However, if you have better approaches or improvements, feel free to open an issue or pull request.
 
 ---
 
-##  Quote to Remember
+## Reminder
 
-> “Consistency is more important than intensity.”
+> “Small improvements daily lead to massive growth over time.”
 
 ---
